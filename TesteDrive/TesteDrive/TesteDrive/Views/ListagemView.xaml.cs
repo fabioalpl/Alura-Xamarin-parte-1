@@ -37,8 +37,10 @@ namespace TesteDrive.Views
         {
             var veiculo = (Veiculo) e.Item;
 
-            DisplayAlert("Teste Drive", string.Format("Você tocou no modelo '{0}', que custa {1} "
-                , veiculo.Nome, veiculo.PrecoFormatado), "Ok");
+            //DisplayAlert("Teste Drive", string.Format("Você tocou no modelo '{0}', que custa {1} "
+            //    , veiculo.Nome, veiculo.PrecoFormatado), "Ok");
+
+            Navigation.PushAsync(new DetalheView(veiculo));
         }
     }
 }

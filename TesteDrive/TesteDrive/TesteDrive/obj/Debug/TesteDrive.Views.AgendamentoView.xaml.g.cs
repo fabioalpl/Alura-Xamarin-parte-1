@@ -8,16 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TesteDrive {
+namespace TesteDrive.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Alura\\Conhecendo Xamarin Forms\\workspace\\TesteDrive\\TesteDrive\\TesteDrive\\App." +
-        "xaml")]
-    public partial class App : global::Xamarin.Forms.Application {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Alura\\Conhecendo Xamarin Forms\\workspace\\TesteDrive\\TesteDrive\\TesteDrive\\View" +
+        "s\\AgendamentoView.xaml")]
+    public partial class AgendamentoView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(App));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AgendamentoView));
         }
     }
 }
