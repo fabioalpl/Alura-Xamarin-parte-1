@@ -38,6 +38,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Agendamento.cs" />
+    <Compile Include="Models\ListagemVeiculos.cs" />
+    <Compile Include="Models\Veiculo.cs" />
+    <Compile Include="ViewModels\AgendamentoViewModel.cs" />
+    <Compile Include="ViewModels\DetalheViewModel.cs" />
+    <Compile Include="ViewModels\ListagemViewModel.cs" />
     <Compile Include="Views\AgendamentoView.xaml.cs">
       <DependentUpon>AgendamentoView.xaml</DependentUpon>
     </Compile>
@@ -88,6 +94,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TesteDrive.Models;
+using TesteDrive.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,13 +18,13 @@ namespace TesteDrive.Views
         public DetalheView(Veiculo veiculo)
         {
             InitializeComponent();
-            this.Title = veiculo.Nome;
-            this.Veiculo = veiculo;
+            //this.Title = veiculo.Nome;
+            this.BindingContext = new DetalheViewModel(veiculo);
         }
 
         private void buttonProximo_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AgendamentoView(this.Veiculo));
+            Navigation.PushAsync(new AgendamentoView(Veiculo));
         }
     }
 }
