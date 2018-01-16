@@ -4,12 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TesteDrive.Models;
+using Xamarin.Forms;
 
 namespace TesteDrive.ViewModels
 {
     public class ListagemViewModel
     {
         public List<Veiculo> Veiculos { get; set; }
+
+        Veiculo veiculoSelecionado;
+        public Veiculo VeiculoSelecionado
+        {
+            get
+            {
+                return veiculoSelecionado;
+            }
+            set
+            {
+                veiculoSelecionado = value;
+                if (value != null)
+                    MessagingCenter.Send(veiculoSelecionado,"VeiculoSelecionado");
+            }
+        }
 
         public ListagemViewModel()
         {

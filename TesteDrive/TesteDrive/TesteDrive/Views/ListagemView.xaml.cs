@@ -15,9 +15,10 @@ namespace TesteDrive.Views
         public ListagemView()
         {
             InitializeComponent();
+
         }
 
-        private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+        /*private void listViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var veiculo = (Veiculo) e.Item;
 
@@ -25,6 +26,22 @@ namespace TesteDrive.Views
             //    , veiculo.Nome, veiculo.PrecoFormatado), "Ok");
 
             Navigation.PushAsync(new DetalheView(veiculo));
+        }*/
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            MessagingCenter.Subscribe<Veiculo>(this, "VeiculoSelecionado",
+                (msg) =>
+                {
+                    Navigation.PushAsync(new DetalheView(msg));
+                });
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<Veiculo>(this, "VeiculoSelecionado");
         }
     }
 }

@@ -8,9 +8,9 @@
     <ContentPage.BindingContext>
         <vm:ListagemViewModel></vm:ListagemViewModel>
     </ContentPage.BindingContext>
-        <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25"
-                  ItemTapped="listViewVeiculos_ItemTapped">
-            <ListView.ItemTemplate>
+    <ListView x:Name="listViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="25"
+                  SelectedItem="{Binding VeiculoSelecionado}">
+        <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
